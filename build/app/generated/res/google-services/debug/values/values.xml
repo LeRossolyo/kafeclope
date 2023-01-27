@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">50782462324-nc8qdl8dra3tu05ov3ft08e5d78ch0r5.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">50782462324</string>
+    <string name="google_api_key" translatable="false">AIzaSyC1EPNlEm3E_7j5pF8FX2YAxjv3H5mfSaw</string>
+    <string name="google_app_id" translatable="false">1:50782462324:android:d6763d81adb03a3b67cc21</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC1EPNlEm3E_7j5pF8FX2YAxjv3H5mfSaw</string>
+    <string name="google_storage_bucket" translatable="false">kafeclope-81953.appspot.com</string>
+    <string name="project_id" translatable="false">kafeclope-81953</string>
+</resources>
