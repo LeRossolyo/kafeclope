@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kafeclope/views/widgets/button.action.dart';
-import 'package:kafeclope/views/widgets/button.icon.dart';
-import 'package:kafeclope/views/widgets/button.main.dart';
+import 'package:kafeclope/views/widgets/buttons/button.action.dart';
+import 'package:kafeclope/views/widgets/buttons/button.icon.dart';
+import 'package:kafeclope/views/widgets/buttons/button.main.dart';
+import 'package:kafeclope/views/widgets/tiles/user.tile.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -19,9 +20,14 @@ class HomePage extends StatelessWidget {
         ),
       ),
       appBar: AppBar(
-        title:
-            Text('Kaféclope', style: Theme.of(context).textTheme.displaySmall),
-      ),
+        title: 
+            Text('Kaféclope',
+                style: Theme.of(context)
+                    .textTheme
+                    .headlineSmall
+                    ?.apply(color: Colors.white)),
+
+        ),
       body: Center(
           child: Column(
         children: [
@@ -34,6 +40,10 @@ class HomePage extends StatelessWidget {
           ButtonIcon(variant: buttonIconVariant.added),
           ButtonIcon(variant: buttonIconVariant.add),
           ButtonIcon(variant: buttonIconVariant.remove),
+          UserTile(variant: userTileVariant.add),
+          UserTile(variant: userTileVariant.added),
+          UserTile(variant: userTileVariant.remove),
+          UserTile(variant: userTileVariant.ask),
         ],
       )),
     );

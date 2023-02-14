@@ -10,6 +10,7 @@ class AppTheme {
       headlineSmall: GoogleFonts.amaranth(
         fontSize: 24,
       ),
+      titleMedium: GoogleFonts.amaranth(fontSize: 16)
     ),
   );
 

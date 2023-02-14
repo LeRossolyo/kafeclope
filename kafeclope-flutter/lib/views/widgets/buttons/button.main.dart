@@ -23,9 +23,9 @@ enum buttonVariant {
   TextStyle? textStyle(BuildContext context) {
     switch (this) {
       case buttonVariant.filled:
-        return GoogleFonts.amaranth(fontSize: 24, color: Colors.white);
+        return Theme.of(context).textTheme.headlineSmall?.apply(color: Colors.white);
       case buttonVariant.disabled:
-        return GoogleFonts.amaranth(fontSize: 24, color: Colors.white);
+        return Theme.of(context).textTheme.headlineSmall?.apply(color: Colors.white);
     }
   }
 }

@@ -36,9 +36,15 @@ enum buttonActionVariant {
   TextStyle? textStyle(BuildContext context) {
     switch (this) {
       case buttonActionVariant.filled:
-        return GoogleFonts.amaranth(fontSize: 24, color: Colors.white);
+        return Theme.of(context)
+            .textTheme
+            .headlineSmall
+            ?.apply(color: Colors.white);
       case buttonActionVariant.unfilled:
-        return GoogleFonts.amaranth(fontSize: 24, color: Colors.white);
+        return Theme.of(context)
+            .textTheme
+            .headlineSmall
+            ?.apply(color: Colors.white);
     }
   }
 }
@@ -49,8 +55,13 @@ class ButtonAction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return variant.buttonstyle('Kaféclope ?', () {
-      print('Helo');
-    }, variant, context);
+    return variant.buttonstyle(
+      'Kaféclope ?',
+      () {
+        print('Helo');
+      },
+      variant,
+      context,
+    );
   }
 }
