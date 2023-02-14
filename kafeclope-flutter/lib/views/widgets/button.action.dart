@@ -22,8 +22,11 @@ enum buttonActionVariant {
               border: Border.all(color: Colors.white, width: 5),
               borderRadius: BorderRadius.all(Radius.circular(30))),
           child: FloatingActionButton.extended(
+            label: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Text(label, style: variant.textStyle(context)),
+            ),
             backgroundColor: Colors.green,
-            label: Text(label, style: variant.textStyle(context)),
             onPressed: action,
           ),
         );
