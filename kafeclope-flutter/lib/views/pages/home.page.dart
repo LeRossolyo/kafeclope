@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:kafeclope/views/widgets/buttons/button.action.dart';
 import 'package:kafeclope/views/widgets/buttons/button.icon.dart';
 import 'package:kafeclope/views/widgets/buttons/button.main.dart';
+import 'package:kafeclope/views/widgets/inputs/input.widget.dart';
+import 'package:kafeclope/views/widgets/inputs/search.input.dart';
+import 'package:kafeclope/views/widgets/tiles/user.select.tile.dart';
 import 'package:kafeclope/views/widgets/tiles/user.tile.dart';
+import 'package:kafeclope/views/widgets/utils/drawer.widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,25 +14,15 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        backgroundColor: Colors.brown,
-        child: Column(
-          children: [
-            const Text('moi'),
-            const Text('moi'),
-          ],
-        ),
-      ),
+      drawer: DrawerApp(),
       appBar: AppBar(
-        title: 
-            Text('Kaféclope',
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineSmall
-                    ?.apply(color: Colors.white)),
-
-        ),
-      body: Center(
+        title: Text('Kaféclope',
+            style: Theme.of(context)
+                .textTheme
+                .headlineSmall
+                ?.apply(color: Colors.white)),
+      ),
+      body: SingleChildScrollView(
           child: Column(
         children: [
           MainButton(
@@ -36,14 +30,23 @@ class HomePage extends StatelessWidget {
             variant: buttonVariant.disabled,
           ),
           ButtonAction(variant: buttonActionVariant.filled),
-          ButtonAction(variant: buttonActionVariant.unfilled),
-          ButtonIcon(variant: buttonIconVariant.added),
-          ButtonIcon(variant: buttonIconVariant.add),
           ButtonIcon(variant: buttonIconVariant.remove),
-          UserTile(variant: userTileVariant.add),
-          UserTile(variant: userTileVariant.added),
-          UserTile(variant: userTileVariant.remove),
           UserTile(variant: userTileVariant.ask),
+          Row(
+            children: [
+              UserSelectTile(
+                variant: userSelectedVariant.selected,
+              ),
+              UserSelectTile(
+                variant: userSelectedVariant.notselected,
+              ),
+            ],
+          ),
+          InputWidget(
+            labelText: 'E-mail',
+            errorText: 'Send Location',
+          ),
+          SearchInput(),
         ],
       )),
     );
