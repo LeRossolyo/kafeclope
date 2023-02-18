@@ -6,13 +6,14 @@ class AppTheme {
     primaryColor: Color.fromRGBO(26, 147, 11, 100),
     primarySwatch: Colors.green,
     textTheme: TextTheme(
-      displaySmall: GoogleFonts.amaranth(fontSize: 36),
-      headlineSmall: GoogleFonts.amaranth(
-        fontSize: 24,
-      ),
-      titleMedium: GoogleFonts.amaranth(fontSize: 16),
-      titleSmall: GoogleFonts.amaranth(fontSize: 14)
-    ),
+        displaySmall: GoogleFonts.amaranth(fontSize: 36),
+        headlineSmall: GoogleFonts.amaranth(
+          fontSize: 24,
+        ),
+        titleMedium: GoogleFonts.amaranth(fontSize: 16),
+        titleSmall: GoogleFonts.amaranth(fontSize: 14),
+        bodyLarge: TextStyle(fontSize: 16),
+        bodySmall: TextStyle(fontSize: 12)),
   );
 
   ThemeData dark = ThemeData(

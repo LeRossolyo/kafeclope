@@ -23,9 +23,15 @@ enum buttonVariant {
   TextStyle? textStyle(BuildContext context) {
     switch (this) {
       case buttonVariant.filled:
-        return Theme.of(context).textTheme.headlineSmall?.apply(color: Colors.white);
+        return Theme.of(context)
+            .textTheme
+            .headlineSmall
+            ?.apply(color: Colors.white);
       case buttonVariant.disabled:
-        return Theme.of(context).textTheme.headlineSmall?.apply(color: Colors.white);
+        return Theme.of(context)
+            .textTheme
+            .headlineSmall
+            ?.apply(color: Colors.white);
     }
   }
 }
@@ -39,7 +45,7 @@ class MainButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: variant.buttonStyle(),
-      onPressed: () => action,
+      onPressed: variant == buttonVariant.disabled ? null : () => action,
       child: Text(
         'Bonjour',
         style: variant.textStyle(context),

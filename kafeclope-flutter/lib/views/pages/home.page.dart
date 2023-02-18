@@ -4,6 +4,7 @@ import 'package:kafeclope/views/widgets/buttons/button.icon.dart';
 import 'package:kafeclope/views/widgets/buttons/button.main.dart';
 import 'package:kafeclope/views/widgets/inputs/input.widget.dart';
 import 'package:kafeclope/views/widgets/inputs/search.input.dart';
+import 'package:kafeclope/views/widgets/tiles/historic.tile.dart';
 import 'package:kafeclope/views/widgets/tiles/user.select.tile.dart';
 import 'package:kafeclope/views/widgets/tiles/user.tile.dart';
 import 'package:kafeclope/views/widgets/utils/drawer.widget.dart';
@@ -47,6 +48,7 @@ class HomePage extends StatelessWidget {
             errorText: 'Send Location',
           ),
           SearchInput(),
+          HistoricTile(),
         ],
       )),
     );
