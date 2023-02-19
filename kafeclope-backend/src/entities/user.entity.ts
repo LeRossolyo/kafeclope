@@ -4,11 +4,11 @@ import { KafeAnswer } from "./kafe-answers.entity";
 import { KafeRequest } from "./kafe-request.entity";
 
 export enum UserTypeEnum {
-    GOOGLE,
-    GITHUB,
-    FACEBOOK,
-    INSTAGRAM,
-    REGULAR,
+    GOOGLE = 'google',
+    GITHUB = 'github',
+    FACEBOOK = 'facebook',
+    INSTAGRAM = 'instagram',
+    REGULAR = 'regular',
 }
 
 @Entity({
@@ -28,7 +28,7 @@ export class User extends BaseEntity {
     @Column()
     password: string;
 
-    @Column({unique: true, nullable: true})
+    @Column({unique: true})
     phone: string;
 
     @Column('bytea')
