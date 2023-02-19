@@ -31,7 +31,7 @@ export class AuthService {
     }
   }
 
-  private _withAuthCookies(res: Response, payload: AuthCredentials): Response {
+  private _withAuthCookies(res: Response, payload: AuthCredentials, statusCode?: number): Response {
     res.cookie('access_token', payload.accessToken, {
       httpOnly: true,
     });
@@ -40,7 +40,7 @@ export class AuthService {
       httpOnly: true,
     });
 
-    res.statusCode = 200;
+    res.statusCode = statusCode ?? 200;
 
     return res.send();
   }
@@ -82,6 +82,14 @@ export class AuthService {
   async refresh(user: User, res: Response) {
     const payload = await this._getCredentials(user);
 
-    return this._withAuthCookies(res, payload);
+    return this._withAuthCookies(res, payload, 204);
+  }
+
+  async signOut(res: Response) {
+    res.cookie('access_token', '', {expires: new Date(0)});
+    res.cookie('refresh_token', '', {expires: new Date(0)});
+
+    res.statusCode = 205;
+    return res.send();
   }
 }

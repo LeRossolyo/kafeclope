@@ -28,4 +28,9 @@ export class AuthController {
     async refresh(@Request() req: RequestAuthenticated, @Res() res: Response) {
         return this.authService.refresh(req.user, res);
     }
+
+    @Post('sign-out')
+    async signOut(@Res() res: Response) {
+        return this.authService.signOut(res);
+    }
 }
