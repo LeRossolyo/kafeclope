@@ -32,11 +32,11 @@ class HomePage extends StatelessWidget {
           ),
           ButtonAction(variant: buttonActionVariant.filled),
           ButtonIcon(variant: buttonIconVariant.remove),
-          UserTile(variant: userTileVariant.ask),
+          UserTile(variant: userTileVariant.added),
           Row(
             children: [
               UserSelectTile(
-                variant: userSelectedVariant.selected,
+                variant: userSelectedVariant.selected, 
               ),
               UserSelectTile(
                 variant: userSelectedVariant.notselected,
@@ -46,6 +46,7 @@ class HomePage extends StatelessWidget {
           InputWidget(
             labelText: 'E-mail',
             errorText: 'Send Location',
+            secure: true,
           ),
           SearchInput(),
           HistoricTile(),

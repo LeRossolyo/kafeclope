@@ -39,14 +39,14 @@ class HistoricTile extends StatelessWidget {
                   children: [
                     Text(
                       'Nom du kafé',
-                      style: Theme.of(context).textTheme.titleMedium,
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
                     SizedBox(
                       height: 10,
                     ),
                     Text(
                       'Date du kafé',
-                      style: Theme.of(context).textTheme.bodyLarge,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
                   ],
                 ),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:kafeclope/views/widgets/utils/user.profile.pic.widget.dart';
 
-enum userSelectedVariant { selected, notselected;
+enum userSelectedVariant {
+  selected,
+  notselected;
 
   Border? is_selected() {
     switch (this) {
@@ -11,7 +13,6 @@ enum userSelectedVariant { selected, notselected;
         return null;
     }
   }
-
 }
 
 class UserSelectTile extends StatelessWidget {
