@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 enum buttonActionVariant {
   filled,
@@ -50,16 +49,20 @@ enum buttonActionVariant {
 }
 
 class ButtonAction extends StatelessWidget {
-  const ButtonAction({super.key, required this.variant});
+  const ButtonAction(
+      {super.key,
+      required this.variant,
+      required this.action,
+      required this.label});
   final buttonActionVariant variant;
+  final Function action;
+  final String label;
 
   @override
   Widget build(BuildContext context) {
     return variant.buttonstyle(
-      'Kaféclope ?',
-      () {
-        print('Helo');
-      },
+      label,
+      action,
       variant,
       context,
     );

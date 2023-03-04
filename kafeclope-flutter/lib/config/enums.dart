@@ -1,4 +1,0 @@
-enum buttonVariant {
-  filled,
-  unfilled
-}

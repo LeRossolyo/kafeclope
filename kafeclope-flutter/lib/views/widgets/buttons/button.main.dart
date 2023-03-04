@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 enum buttonVariant {
   filled,
@@ -37,7 +36,12 @@ enum buttonVariant {
 }
 
 class MainButton extends StatelessWidget {
-  const MainButton({super.key, required this.action, required this.variant});
+  const MainButton(
+      {super.key,
+      required this.label,
+      required this.action,
+      required this.variant});
+  final String label;
   final Function action;
   final buttonVariant variant;
 
@@ -45,9 +49,9 @@ class MainButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: variant.buttonStyle(),
-      onPressed: variant == buttonVariant.disabled ? null : () => action,
+      onPressed: variant == buttonVariant.disabled ? null : () => action(),
       child: Text(
-        'Bonjour',
+        label,
         style: variant.textStyle(context),
       ),
     );

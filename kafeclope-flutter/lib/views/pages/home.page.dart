@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:kafeclope/views/widgets/buttons/button.action.dart';
-import 'package:kafeclope/views/widgets/buttons/button.icon.dart';
-import 'package:kafeclope/views/widgets/buttons/button.main.dart';
-import 'package:kafeclope/views/widgets/inputs/input.widget.dart';
 import 'package:kafeclope/views/widgets/inputs/search.input.dart';
-import 'package:kafeclope/views/widgets/tiles/historic.tile.dart';
 import 'package:kafeclope/views/widgets/tiles/user.select.tile.dart';
-import 'package:kafeclope/views/widgets/tiles/user.tile.dart';
 import 'package:kafeclope/views/widgets/utils/drawer.widget.dart';
+import 'package:kafeclope/views/widgets/utils/kafe.dialogue.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
+
+  _showKafeModal(context) {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return KafeDialog(
+              create_kafe: (title, description) =>
+                  print('$title & $description'));
+        });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,35 +29,26 @@ class HomePage extends StatelessWidget {
                 .headlineSmall
                 ?.apply(color: Colors.white)),
       ),
-      body: SingleChildScrollView(
-          child: Column(
+      body: Column(
         children: [
-          MainButton(
-            action: () => print('Test'),
-            variant: buttonVariant.disabled,
-          ),
-          ButtonAction(variant: buttonActionVariant.filled),
-          ButtonIcon(variant: buttonIconVariant.remove),
-          UserTile(variant: userTileVariant.added),
-          Row(
-            children: [
-              UserSelectTile(
-                variant: userSelectedVariant.selected, 
-              ),
-              UserSelectTile(
-                variant: userSelectedVariant.notselected,
-              ),
-            ],
-          ),
-          InputWidget(
-            labelText: 'E-mail',
-            errorText: 'Send Location',
-            secure: true,
-          ),
           SearchInput(),
-          HistoricTile(),
+          Expanded(
+            child: GridView.count(
+              crossAxisCount: 2,
+              children: [
+                UserSelectTile(variant: userSelectedVariant.notselected),
+                UserSelectTile(variant: userSelectedVariant.notselected),
+                UserSelectTile(variant: userSelectedVariant.selected)
+              ],
+            ),
+          ),
         ],
-      )),
+      ),
+      floatingActionButton: ButtonAction(
+        label: 'Kafféclope',
+        variant: buttonActionVariant.filled,
+        action: () => _showKafeModal(context),
+      ),
     );
   }
 }
