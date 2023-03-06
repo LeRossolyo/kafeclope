@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>61961902527-bi1pduj0f5f010lvoaq35e62rhipu90n.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.61961902527-bi1pduj0f5f010lvoaq35e62rhipu90n</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDEAaLDkpwqf3fT0e6d_6TtN-nDV-o2cUo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>61961902527</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.kafeclope</string>
+	<key>PROJECT_ID</key>
+	<string>kafeclope-b94fa</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kafeclope-b94fa.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:61961902527:ios:aadceee5f486627970290a</string>
+</dict>
+</plist>
