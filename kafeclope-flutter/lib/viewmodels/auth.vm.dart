@@ -1,8 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class AuthVM extends ChangeNotifier {
   StackRouter _router;
+  final ImagePicker _picker = ImagePicker();
 
   AuthVM(this._router) : super();
 
@@ -36,5 +38,9 @@ class AuthVM extends ChangeNotifier {
   register(String email, String id, String username, String password) async {
     print('user created');
     redirectTo('auth/picture');
+  }
+
+  addProfilePicture() async {
+    final XFile? _pic = await _picker.pickImage(source: ImageSource.gallery);
   }
 }

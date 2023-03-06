@@ -8,32 +8,39 @@ import 'package:kafeclope/views/pages/friends.page.dart';
 import 'package:kafeclope/views/pages/historic.page.dart';
 import 'package:kafeclope/views/pages/home.page.dart';
 import 'package:kafeclope/views/pages/room.page.dart';
-import 'package:kafeclope/views/pages/user.infos.page.dart';
-import 'package:kafeclope/views/pages/user.page.dart';
+import 'package:kafeclope/views/pages/user/user.home.dart';
+import 'package:kafeclope/views/pages/user/user.infos.page.dart';
+import 'package:kafeclope/views/pages/user/user.page.dart';
 
 part 'app_router.gr.dart';
 
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',
   routes: <AutoRoute>[
-    AutoRoute(
-      page: HomePage,
-      path: 'home',
-    ),
+    AutoRoute(page: HomePage, path: 'home', initial: true),
     AutoRoute(
         page: AuthPage,
         path: 'auth',
         initial: true,
         children: <AutoRoute>[
           AutoRoute(page: RegisterPage, path: 'register'),
-          AutoRoute(page: RegisterPicturePage, path: 'picture', initial: true),
+          AutoRoute(
+            page: RegisterPicturePage,
+            path: 'picture',
+          ),
           AutoRoute(
             page: LoginPage,
             path: 'login',
           ),
         ]),
-    AutoRoute(page: UserInfoPage, path: 'user_info'),
-    AutoRoute(page: UserPage, path: 'user'),
+    AutoRoute(
+      page: UserPage,
+      path: 'user',
+      children: [
+        AutoRoute(page: UserInfoPage, path: 'info'),
+        AutoRoute(page: UserHomePage, path: 'home'),
+      ],
+    ),
     AutoRoute(page: FriendsPage, path: 'firends'),
     AutoRoute(page: RoomPage, path: 'room'),
     AutoRoute(page: HistoricPage, path: 'historic'),

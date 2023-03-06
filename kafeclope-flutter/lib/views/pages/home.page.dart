@@ -28,6 +28,7 @@ class HomePage extends StatelessWidget {
                 .textTheme
                 .headlineSmall
                 ?.apply(color: Colors.white)),
+        centerTitle: true,
       ),
       body: Column(
         children: [

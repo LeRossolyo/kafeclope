@@ -4,8 +4,8 @@ import 'package:kafeclope/views/widgets/utils/drawer.widget.dart';
 import 'package:kafeclope/views/widgets/utils/utils.tile.dart';
 import 'package:provider/provider.dart';
 
-class UserPage extends StatelessWidget {
-  const UserPage({super.key});
+class UserHomePage extends StatelessWidget {
+  const UserHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +53,7 @@ class UserPage extends StatelessWidget {
                     UtilsTile(
                       icon: Icons.person_outline,
                       label: 'Informations',
-                      redirect: () => print('hola'),
+                      redirect: () => vm.redirectTo('user/info'),
                     ),
                     UtilsTile(
                       icon: Icons.bar_chart,
@@ -75,6 +75,7 @@ class UserPage extends StatelessWidget {
                       redirect: vm.disconnect,
                     ),
                     UtilsTile(
+                      red: true,
                       icon: Icons.delete_forever_outlined,
                       label: 'Supprimer',
                       redirect: () => print('hola'),

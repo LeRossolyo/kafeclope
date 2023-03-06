@@ -40,7 +40,7 @@ class DrawerApp extends StatelessWidget {
                               style: Theme.of(context).textTheme.titleLarge),
                           IconButton(
                               onPressed: () {
-                                vm.redirectTo('user');
+                                vm.redirectTo('user/home');
                               },
                               icon: Icon(
                                 Icons.settings,
@@ -57,6 +57,7 @@ class DrawerApp extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       TextButton(
                         onPressed: () {

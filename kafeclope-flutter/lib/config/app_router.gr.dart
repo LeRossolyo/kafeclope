@@ -29,12 +29,6 @@ class _$AppRouter extends RootStackRouter {
         child: const AuthPage(),
       );
     },
-    UserInfoRoute.name: (routeData) {
-      return MaterialPageX<dynamic>(
-        routeData: routeData,
-        child: const UserInfoPage(),
-      );
-    },
     UserRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
@@ -77,6 +71,18 @@ class _$AppRouter extends RootStackRouter {
         child: const LoginPage(),
       );
     },
+    UserInfoRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const UserInfoPage(),
+      );
+    },
+    UserHomeRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const UserHomePage(),
+      );
+    },
   };
 
   @override
@@ -84,7 +90,7 @@ class _$AppRouter extends RootStackRouter {
         RouteConfig(
           '/#redirect',
           path: '/',
-          redirectTo: 'auth',
+          redirectTo: 'home',
           fullMatch: true,
         ),
         RouteConfig(
@@ -95,13 +101,6 @@ class _$AppRouter extends RootStackRouter {
           AuthRoute.name,
           path: 'auth',
           children: [
-            RouteConfig(
-              '#redirect',
-              path: '',
-              parent: AuthRoute.name,
-              redirectTo: 'login',
-              fullMatch: true,
-            ),
             RouteConfig(
               RegisterRoute.name,
               path: 'register',
@@ -120,12 +119,20 @@ class _$AppRouter extends RootStackRouter {
           ],
         ),
         RouteConfig(
-          UserInfoRoute.name,
-          path: 'user_info',
-        ),
-        RouteConfig(
           UserRoute.name,
           path: 'user',
+          children: [
+            RouteConfig(
+              UserInfoRoute.name,
+              path: 'info',
+              parent: UserRoute.name,
+            ),
+            RouteConfig(
+              UserHomeRoute.name,
+              path: 'home',
+              parent: UserRoute.name,
+            ),
+          ],
         ),
         RouteConfig(
           FriendsRoute.name,
@@ -168,24 +175,13 @@ class AuthRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [UserInfoPage]
-class UserInfoRoute extends PageRouteInfo<void> {
-  const UserInfoRoute()
-      : super(
-          UserInfoRoute.name,
-          path: 'user_info',
-        );
-
-  static const String name = 'UserInfoRoute';
-}
-
-/// generated route for
 /// [UserPage]
 class UserRoute extends PageRouteInfo<void> {
-  const UserRoute()
+  const UserRoute({List<PageRouteInfo>? children})
       : super(
           UserRoute.name,
           path: 'user',
+          initialChildren: children,
         );
 
   static const String name = 'UserRoute';
@@ -261,4 +257,28 @@ class LoginRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'LoginRoute';
+}
+
+/// generated route for
+/// [UserInfoPage]
+class UserInfoRoute extends PageRouteInfo<void> {
+  const UserInfoRoute()
+      : super(
+          UserInfoRoute.name,
+          path: 'info',
+        );
+
+  static const String name = 'UserInfoRoute';
+}
+
+/// generated route for
+/// [UserHomePage]
+class UserHomeRoute extends PageRouteInfo<void> {
+  const UserHomeRoute()
+      : super(
+          UserHomeRoute.name,
+          path: 'home',
+        );
+
+  static const String name = 'UserHomeRoute';
 }

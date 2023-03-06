@@ -12,12 +12,12 @@ import 'package:injectable/injectable.dart' as _i2;
 import 'package:kafeclope/config/app_router.dart' as _i3;
 import 'package:kafeclope/injections/module/app.module.dart' as _i8;
 import 'package:kafeclope/services/auth.service.dart' as _i7;
-import 'package:kafeclope/services/firebase.service.dart' as _i6;
+import 'package:kafeclope/services/firebase.service.dart'
+    as _i6; // ignore_for_file: unnecessary_lambdas
 
-/// ignore_for_file: unnecessary_lambdas
-/// ignore_for_file: lines_longer_than_80_chars
+// ignore_for_file: lines_longer_than_80_chars
 extension GetItInjectableX on _i1.GetIt {
-  /// initializes the registration of main-scope dependencies inside of [GetIt]
+  // initializes the registration of main-scope dependencies inside of GetIt
   Future<_i1.GetIt> init({
     String? environment,
     _i2.EnvironmentFilter? environmentFilter,
