@@ -65,6 +65,12 @@ class _$AppRouter extends RootStackRouter {
         child: const RegisterPicturePage(),
       );
     },
+    CodeRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CodePage(),
+      );
+    },
     LoginRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
@@ -112,6 +118,11 @@ class _$AppRouter extends RootStackRouter {
               parent: AuthRoute.name,
             ),
             RouteConfig(
+              CodeRoute.name,
+              path: 'code',
+              parent: AuthRoute.name,
+            ),
+            RouteConfig(
               LoginRoute.name,
               path: 'login',
               parent: AuthRoute.name,
@@ -136,7 +147,7 @@ class _$AppRouter extends RootStackRouter {
         ),
         RouteConfig(
           FriendsRoute.name,
-          path: 'firends',
+          path: 'firend',
         ),
         RouteConfig(
           RoomRoute.name,
@@ -193,7 +204,7 @@ class FriendsRoute extends PageRouteInfo<void> {
   const FriendsRoute()
       : super(
           FriendsRoute.name,
-          path: 'firends',
+          path: 'firend',
         );
 
   static const String name = 'FriendsRoute';
@@ -245,6 +256,18 @@ class RegisterPictureRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'RegisterPictureRoute';
+}
+
+/// generated route for
+/// [CodePage]
+class CodeRoute extends PageRouteInfo<void> {
+  const CodeRoute()
+      : super(
+          CodeRoute.name,
+          path: 'code',
+        );
+
+  static const String name = 'CodeRoute';
 }
 
 /// generated route for

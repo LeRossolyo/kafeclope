@@ -73,7 +73,7 @@ class DrawerApp extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () {
-                          vm.redirectTo('historic');
+                          vm.redirectTo('friend');
                         },
                         child: Text(
                           'Historique',
@@ -85,7 +85,7 @@ class DrawerApp extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () {
-                          vm.redirectTo('friends');
+                          vm.redirectTo('friend');
                         },
                         child: Text(
                           'Mes amis',

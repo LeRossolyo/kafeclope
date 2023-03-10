@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:kafeclope/views/pages/auth/auth.page.dart';
+import 'package:kafeclope/views/pages/auth/code.page.dart';
 import 'package:kafeclope/views/pages/auth/login.page.dart';
 import 'package:kafeclope/views/pages/auth/register.page.dart';
 import 'package:kafeclope/views/pages/auth/register.picture.page.dart';
@@ -28,6 +29,7 @@ part 'app_router.gr.dart';
             page: RegisterPicturePage,
             path: 'picture',
           ),
+          AutoRoute(page: CodePage, path: 'code'),
           AutoRoute(
             page: LoginPage,
             path: 'login',
@@ -41,7 +43,7 @@ part 'app_router.gr.dart';
         AutoRoute(page: UserHomePage, path: 'home'),
       ],
     ),
-    AutoRoute(page: FriendsPage, path: 'firends'),
+    AutoRoute(page: FriendsPage, path: 'firend'),
     AutoRoute(page: RoomPage, path: 'room'),
     AutoRoute(page: HistoricPage, path: 'historic'),
   ],
