@@ -1,24 +1,31 @@
-import { Body, Controller, Delete, Get, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Patch, Post, Request, Res, UseGuards } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
+import { Response } from 'express';
+import { JwtAuthGuard } from 'src/auth/jwt.guard';
 import { User } from 'src/entities/user.entity';
+import { RequestAuthenticated } from 'src/interfaces/RequestAuthenticated';
 import { UsersService } from './users.service';
 
 @Controller('users')
 export class UsersController {
-    constructor(private readonly appService: UsersService) {}
+    constructor(private readonly usersService: UsersService) {}
 
     @Get('/data')
-    getData(): string {
-        return "Get Current user data"
+    @UseGuards(JwtAuthGuard)
+    async getData(@Request() req: RequestAuthenticated, @Res() res: Response): Promise<Response> {
+        return await this.usersService.getData(req, res);
     }
 
     @Patch('/data')
-    updateData(): string {
-        return 'Update user data'
+    @UseGuards(JwtAuthGuard)
+    async updateData(@Request() req: RequestAuthenticated, @Res() res: Response): Promise<Response> {
+        return await this.usersService.updateData(req, req.body, res)
     }
 
     @Delete()
-    deleteUser(): string {
-        return 'delete User'
+    @UseGuards(JwtAuthGuard)
+    async deleteUser(@Request() req: RequestAuthenticated, @Res() res: Response): Promise<Response> {
+        return await this.usersService.deleteUser(req, res);
     }
 
     @Patch('/picture')

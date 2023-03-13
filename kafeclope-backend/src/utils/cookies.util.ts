@@ -1,31 +1,26 @@
 import { Request } from "express";
+import { IncomingHttpHeaders } from "http";
 
-export class CookiesUtil {
-    static parseCookies(cookies: string | undefined): {[Key: string]: string} {
-        if (cookies === undefined) {
-            return {};
-        }
-
-        const rawCookies = cookies.split('; ');
-        const result: {[Key: string]: string} = {};
-        rawCookies.forEach((rawCookie: string) => {
-            const [key, value] = rawCookie.split('=');
-            result[key] = value;
-        });
-
-        return result;
-    }
-
-    static extractCookie(req: Request, name: string): string | null {
-        const cookies = this.parseCookies(req.headers.cookie);
+export abstract class JwtUtil {
+    static extractJWT(req: Request): string | null {
+        const token = JwtUtil.parseHeaders(req.headers);
 
         if (
-            cookies &&
-            name in cookies &&
-            cookies[name].length > 0
+            token &&
+            token?.length > 0
         ) {
-            return cookies[name];
+            return token;
         }
         return null;
+    }
+
+    private static parseHeaders(headers: IncomingHttpHeaders): string | undefined {
+        if (headers === undefined) {
+            return;
+        }
+        console.log(headers.authorization);
+        const token = headers.authorization?.replace("Bearer ","");
+
+        return token;
     }
 }

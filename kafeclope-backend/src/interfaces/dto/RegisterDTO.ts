@@ -1,9 +1,8 @@
 import { BadRequestException } from "@nestjs/common";
-import { IsEmail, IsEnum, IsOptional, IsPhoneNumber, IsString, IsStrongPassword, registerDecorator, ValidationArguments, ValidationOptions } from "class-validator";
-import { cp } from "fs";
+import { IsEmail, IsOptional, IsString, registerDecorator, ValidationArguments, ValidationOptions } from "class-validator";
 import { dataSource } from "src/database.module";
 import { User } from "src/entities/user.entity";
-import { BaseEntity, EntityTarget, ObjectLiteral, ObjectType } from "typeorm";
+import { EntityTarget, ObjectLiteral } from "typeorm";
 
 export class RegisterDTO {
   @IsUnique('email', User)
