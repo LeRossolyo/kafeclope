@@ -19,12 +19,9 @@ export class UsersService {
   }
 
   async create(dto: RegisterDTO) {
-
-
-    const user = User.create({ ...dto, userType: dto.type, password: await hash(dto.password, 10) });
+    const user = User.create({ ...dto, password: await hash(dto.password, 10) });
 
     await user.save();
-
     return user;
   }
 }

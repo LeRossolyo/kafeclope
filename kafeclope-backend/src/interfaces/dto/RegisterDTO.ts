@@ -2,7 +2,7 @@ import { BadRequestException } from "@nestjs/common";
 import { IsEmail, IsEnum, IsOptional, IsPhoneNumber, IsString, IsStrongPassword, registerDecorator, ValidationArguments, ValidationOptions } from "class-validator";
 import { cp } from "fs";
 import { dataSource } from "src/database.module";
-import { User, UserTypeEnum } from "src/entities/user.entity";
+import { User } from "src/entities/user.entity";
 import { BaseEntity, EntityTarget, ObjectLiteral, ObjectType } from "typeorm";
 
 export class RegisterDTO {
@@ -10,22 +10,26 @@ export class RegisterDTO {
   @IsEmail()
   email: string;
 
+  @IsUnique('handle', User)
+  @IsString()
+  handle: string;
+
   @IsString()
   username: string;
 
-  @IsStrongPassword()
+  // @IsStrongPassword()
   password: string;
 
-  @IsOptional()
-  @IsPhoneNumber()
-  @IsUnique('phone', User)
-  phone: string;
+  // @IsOptional()
+  // @IsPhoneNumber()
+  // @IsUnique('phone', User)
+  // phone: string;
 
   @IsOptional()
   picture?: string;
 
-  @IsEnum(UserTypeEnum)
-  type?: UserTypeEnum;
+  // @IsEnum(UserTypeEnum)
+  // type?: UserTypeEnum;
 }
 
 export function IsUnique<T extends ObjectLiteral>(property: string, target: EntityTarget<T>, validationOptions?: ValidationOptions) {

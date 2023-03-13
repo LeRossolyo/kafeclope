@@ -23,6 +23,7 @@
     "migration:down": "./node_modules/.bin/ts-node ./node_modules/typeorm/cli.js migration:revert -d ./ormconfig.ts"
   },
   "dependencies": {
+    "@nestjs/cli": "^9.0.0",
     "@nestjs/common": "^9.0.0",
     "@nestjs/config": "^2.3.1",
     "@nestjs/core": "^9.0.0",
@@ -42,7 +43,6 @@
     "typeorm": "^0.3.11"
   },
   "devDependencies": {
-    "@nestjs/cli": "^9.0.0",
     "@nestjs/schematics": "^9.0.0",
     "@nestjs/testing": "^9.0.0",
     "@types/bcrypt": "^5.0.0",

@@ -60,10 +60,10 @@ dependencies:
   pg: 8.9.0
   reflect-metadata: 0.1.13
   rxjs: 7.8.0
-  typeorm: 0.3.11_pg@8.9.0+ts-node@10.9.1
+  typeorm: 0.3.11_pg@8.9.0+ts-node@10.9.1*
+  '@nestjs/cli': 9.1.9
 
 devDependencies:
-  '@nestjs/cli': 9.1.9
   '@nestjs/schematics': 9.0.4_typescript@4.9.4
   '@nestjs/testing': 9.2.1_wdbvfsxfdwzlwdfiyh2gynjl4m
   '@types/bcrypt': 5.0.0
@@ -143,7 +143,7 @@ packages:
       symbol-observable: 4.0.0
       yargs-parser: 21.1.1
     transitivePeerDependencies:
-      - chokidar
+    - chokidar
     dev: true
 
   /@angular-devkit/schematics/15.0.4:
@@ -156,7 +156,7 @@ packages:
       ora: 5.4.1
       rxjs: 6.6.7
     transitivePeerDependencies:
-      - chokidar
+    - chokidar
     dev: true
 
   /@angular-devkit/schematics/15.0.4_chokidar@3.5.3:
@@ -169,7 +169,7 @@ packages:
       ora: 5.4.1
       rxjs: 6.6.7
     transitivePeerDependencies:
-      - chokidar
+    - chokidar
     dev: true
 
   /@babel/code-frame/7.18.6:
@@ -204,7 +204,7 @@ packages:
       json5: 2.2.3
       semver: 6.3.0
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /@babel/generator/7.20.7:
@@ -270,7 +270,7 @@ packages:
       '@babel/traverse': 7.20.13
       '@babel/types': 7.20.7
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /@babel/helper-plugin-utils/7.20.2:
@@ -315,7 +315,7 @@ packages:
       '@babel/traverse': 7.20.13
       '@babel/types': 7.20.7
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /@babel/highlight/7.18.6:
@@ -488,7 +488,7 @@ packages:
       debug: 4.3.4
       globals: 11.12.0
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /@babel/types/7.20.7:
@@ -531,7 +531,7 @@ packages:
       minimatch: 3.1.2
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /@humanwhocodes/config-array/0.11.8:
@@ -542,7 +542,7 @@ packages:
       debug: 4.3.4
       minimatch: 3.1.2
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /@humanwhocodes/module-importer/1.0.1:
@@ -620,8 +620,8 @@ packages:
       slash: 3.0.0
       strip-ansi: 6.0.1
     transitivePeerDependencies:
-      - supports-color
-      - ts-node
+    - supports-color
+    - ts-node
     dev: true
 
   /@jest/environment/29.4.1:
@@ -648,7 +648,7 @@ packages:
       expect: 29.4.1
       jest-snapshot: 29.4.1
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /@jest/fake-timers/29.4.1:
@@ -672,7 +672,7 @@ packages:
       '@jest/types': 29.4.1
       jest-mock: 29.4.1
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /@jest/reporters/29.4.1:
@@ -709,7 +709,7 @@ packages:
       strip-ansi: 6.0.1
       v8-to-istanbul: 9.0.1
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /@jest/schemas/29.4.0:
@@ -768,7 +768,7 @@ packages:
       slash: 3.0.0
       write-file-atomic: 5.0.0
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /@jest/types/29.4.1:
@@ -846,8 +846,8 @@ packages:
       semver: 7.3.8
       tar: 6.1.13
     transitivePeerDependencies:
-      - encoding
-      - supports-color
+    - encoding
+    - supports-color
     dev: false
 
   /@nestjs/cli/9.1.9:
@@ -878,11 +878,11 @@ packages:
       webpack: 5.75.0
       webpack-node-externals: 3.0.0
     transitivePeerDependencies:
-      - '@swc/core'
-      - esbuild
-      - uglify-js
-      - vue-template-compiler
-      - webpack-cli
+    - '@swc/core'
+    - esbuild
+    - uglify-js
+    - vue-template-compiler
+    - webpack-cli
     dev: true
 
   /@nestjs/common/9.2.1_welcnyot5bzd5wa2aovbkxpi4i:
@@ -955,7 +955,7 @@ packages:
       tslib: 2.4.1
       uuid: 9.0.0
     transitivePeerDependencies:
-      - encoding
+    - encoding
 
   /@nestjs/jwt/10.0.1_@nestjs+common@9.2.1:
     resolution: {integrity: sha512-LwXBKVYHnFeX6GH/Wt0WDjsWCmNDC6tEdLlwNMAvJgYp+TkiCpEmQLkgRpifdUE29mvYSbjSnVs2kW2ob935NA==}
@@ -991,7 +991,7 @@ packages:
       multer: 1.4.4-lts.1
       tslib: 2.4.1
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
 
   /@nestjs/schematics/9.0.4_bpd7edbl7imd2lxcmdt57tn7ne:
     resolution: {integrity: sha512-egurCfAc4e5i1r2TmeAF0UrOKejFmT5oTdv4b7HcOVPupc3QGU7CbEfGleL3mkM5AjrixTQeMxU9bJ00ttAbGg==}
@@ -1005,7 +1005,7 @@ packages:
       pluralize: 8.0.0
       typescript: 4.9.4
     transitivePeerDependencies:
-      - chokidar
+    - chokidar
     dev: true
 
   /@nestjs/schematics/9.0.4_typescript@4.9.4:
@@ -1020,7 +1020,7 @@ packages:
       pluralize: 8.0.0
       typescript: 4.9.4
     transitivePeerDependencies:
-      - chokidar
+    - chokidar
     dev: true
 
   /@nestjs/testing/9.2.1_wdbvfsxfdwzlwdfiyh2gynjl4m:
@@ -1089,7 +1089,7 @@ packages:
       consola: 2.15.3
       node-fetch: 2.6.8
     transitivePeerDependencies:
-      - encoding
+    - encoding
 
   /@sinclair/typebox/0.25.21:
     resolution: {integrity: sha512-gFukHN4t8K4+wVC+ECqeqwzBDeFeTzBXroBTqE6vcWrQGbEUpHO7LYdG0f4xnvYq4VOEwITSlHlp0JBAIFMS/g==}
@@ -1365,7 +1365,7 @@ packages:
       tsutils: 3.21.0_typescript@4.9.4
       typescript: 4.9.4
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /@typescript-eslint/parser/5.49.0_7uibuqfxkfaozanbtbziikiqje:
@@ -1385,7 +1385,7 @@ packages:
       eslint: 8.32.0
       typescript: 4.9.4
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /@typescript-eslint/scope-manager/5.49.0:
@@ -1413,7 +1413,7 @@ packages:
       tsutils: 3.21.0_typescript@4.9.4
       typescript: 4.9.4
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /@typescript-eslint/types/5.49.0:
@@ -1439,7 +1439,7 @@ packages:
       tsutils: 3.21.0_typescript@4.9.4
       typescript: 4.9.4
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /@typescript-eslint/utils/5.49.0_7uibuqfxkfaozanbtbziikiqje:
@@ -1458,8 +1458,8 @@ packages:
       eslint-utils: 3.0.0_eslint@8.32.0
       semver: 7.3.8
     transitivePeerDependencies:
-      - supports-color
-      - typescript
+    - supports-color
+    - typescript
     dev: true
 
   /@typescript-eslint/visitor-keys/5.49.0:
@@ -1626,7 +1626,7 @@ packages:
     dependencies:
       debug: 4.3.4
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: false
 
   /ajv-formats/2.1.1:
@@ -1773,7 +1773,7 @@ packages:
       graceful-fs: 4.2.10
       slash: 3.0.0
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /babel-plugin-istanbul/6.1.1:
@@ -1786,7 +1786,7 @@ packages:
       istanbul-lib-instrument: 5.2.1
       test-exclude: 6.0.0
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /babel-plugin-jest-hoist/29.4.0:
@@ -1844,8 +1844,8 @@ packages:
       '@mapbox/node-pre-gyp': 1.0.10
       node-addon-api: 5.1.0
     transitivePeerDependencies:
-      - encoding
-      - supports-color
+    - encoding
+    - supports-color
     dev: false
 
   /binary-extensions/2.2.0:
@@ -1878,7 +1878,7 @@ packages:
       type-is: 1.6.18
       unpipe: 1.0.0
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
 
   /brace-expansion/1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
@@ -2539,7 +2539,7 @@ packages:
       strip-json-comments: 3.1.1
       text-table: 0.2.0
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /espree/9.4.1:
@@ -2677,7 +2677,7 @@ packages:
       utils-merge: 1.0.1
       vary: 1.1.2
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
 
   /external-editor/3.1.0:
     resolution: {integrity: sha512-hMQ4CX1p1izmuLYyZqLMO/qGNw10wSv9QDCPfzXfyFrOaCSSoRfqE1Kf1s5an66J5JZC62NewG+mK49jOCtQew==}
@@ -2763,7 +2763,7 @@ packages:
       statuses: 2.0.1
       unpipe: 1.0.0
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
 
   /find-up/4.1.0:
     resolution: {integrity: sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==}
@@ -3050,7 +3050,7 @@ packages:
       agent-base: 6.0.2
       debug: 4.3.4
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: false
 
   /human-signals/1.1.1:
@@ -3242,7 +3242,7 @@ packages:
       istanbul-lib-coverage: 3.2.0
       semver: 6.3.0
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /istanbul-lib-report/3.0.0:
@@ -3262,7 +3262,7 @@ packages:
       istanbul-lib-coverage: 3.2.0
       source-map: 0.6.1
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /istanbul-reports/3.1.5:
@@ -3309,7 +3309,7 @@ packages:
       slash: 3.0.0
       stack-utils: 2.0.6
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /jest-cli/29.4.1_zfha7dvnw4nti6zkbsmhmn6xo4:
@@ -3335,9 +3335,9 @@ packages:
       prompts: 2.4.2
       yargs: 17.6.2
     transitivePeerDependencies:
-      - '@types/node'
-      - supports-color
-      - ts-node
+    - '@types/node'
+    - supports-color
+    - ts-node
     dev: true
 
   /jest-config/29.4.1_zfha7dvnw4nti6zkbsmhmn6xo4:
@@ -3377,7 +3377,7 @@ packages:
       strip-json-comments: 3.1.1
       ts-node: 10.9.1_awa2wsr5thmg3i7jqycphctjfq
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /jest-diff/29.4.1:
@@ -3510,7 +3510,7 @@ packages:
       jest-regex-util: 29.2.0
       jest-snapshot: 29.4.1
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /jest-resolve/29.4.1:
@@ -3554,7 +3554,7 @@ packages:
       p-limit: 3.1.0
       source-map-support: 0.5.13
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /jest-runtime/29.4.1:
@@ -3585,7 +3585,7 @@ packages:
       slash: 3.0.0
       strip-bom: 4.0.0
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /jest-snapshot/29.4.1:
@@ -3617,7 +3617,7 @@ packages:
       pretty-format: 29.4.1
       semver: 7.3.8
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /jest-util/29.4.1:
@@ -3692,9 +3692,9 @@ packages:
       import-local: 3.1.0
       jest-cli: 29.4.1_zfha7dvnw4nti6zkbsmhmn6xo4
     transitivePeerDependencies:
-      - '@types/node'
-      - supports-color
-      - ts-node
+    - '@types/node'
+    - supports-color
+    - ts-node
     dev: true
 
   /js-sdsl/4.3.0:
@@ -4668,7 +4668,7 @@ packages:
       range-parser: 1.2.1
       statuses: 2.0.1
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
 
   /serialize-javascript/6.0.1:
     resolution: {integrity: sha512-owoXEFjWRllis8/M1Q+Cw5k8ZH40e3zhp/ovX+Xr/vi1qj6QesbyXXViFbpNvWvPNAD62SutwEXavefrLJWj7w==}
@@ -4685,7 +4685,7 @@ packages:
       parseurl: 1.3.3
       send: 0.18.0
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
 
   /set-blocking/2.0.0:
     resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==}
@@ -4863,7 +4863,7 @@ packages:
       qs: 6.11.0
       semver: 7.3.8
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /supertest/6.3.3:
@@ -4873,7 +4873,7 @@ packages:
       methods: 1.1.2
       superagent: 8.0.9
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: true
 
   /supports-color/5.5.0:
@@ -5248,7 +5248,7 @@ packages:
       xml2js: 0.4.23
       yargs: 17.6.2
     transitivePeerDependencies:
-      - supports-color
+    - supports-color
     dev: false
 
   /typescript/4.9.4:
@@ -5386,9 +5386,9 @@ packages:
       watchpack: 2.4.0
       webpack-sources: 3.2.3
     transitivePeerDependencies:
-      - '@swc/core'
-      - esbuild
-      - uglify-js
+    - '@swc/core'
+    - esbuild
+    - uglify-js
     dev: true
 
   /whatwg-url/5.0.0:

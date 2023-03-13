@@ -3,13 +3,13 @@ import { Friendship } from "./friendship.entity";
 import { KafeAnswer } from "./kafe-answers.entity";
 import { KafeRequest } from "./kafe-request.entity";
 
-export enum UserTypeEnum {
-    GOOGLE = 'google',
-    GITHUB = 'github',
-    FACEBOOK = 'facebook',
-    INSTAGRAM = 'instagram',
-    REGULAR = 'regular',
-}
+// export enum UserTypeEnum {
+//     GOOGLE = 'google',
+//     GITHUB = 'github',
+//     FACEBOOK = 'facebook',
+//     INSTAGRAM = 'instagram',
+//     REGULAR = 'regular',
+// }
 
 @Entity({
     name: 'users',
@@ -18,6 +18,9 @@ export enum UserTypeEnum {
 export class User extends BaseEntity {
     @PrimaryGeneratedColumn()
     id: number;
+
+    @Column({unique: true})
+    handle: string
 
     @Column()
     username: string;
@@ -28,18 +31,18 @@ export class User extends BaseEntity {
     @Column()
     password: string;
 
-    @Column({unique: true})
-    phone: string;
+    // @Column({unique: true})
+    // phone: string;
 
-    @Column('bytea')
+    @Column({nullable: true})
     picture: string;
 
-    @Column({
-        type: "enum",
-        enum: UserTypeEnum,
-        default: UserTypeEnum.REGULAR
-    })
-    userType: UserTypeEnum;
+    // @Column({
+    //     type: "enum",
+    //     enum: UserTypeEnum,
+    //     default: UserTypeEnum.REGULAR
+    // })
+    // userType: UserTypeEnum;
 
     @ManyToMany(() => Friendship, (friendship) => friendship.users)
     @JoinTable()
